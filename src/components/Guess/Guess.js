@@ -3,8 +3,8 @@ import { range } from '../../utils';
 import { checkGuess } from '../../game-helpers';
 import { BLANK_GUESS_ARRAY } from '../../constants';
 
-const Guess = function({ guess }) {
-  let guessArr = checkGuess(guess, 'PENUS') ?? BLANK_GUESS_ARRAY;
+const Guess = function({ guess, answer }) {
+  let guessArr = checkGuess(guess, answer) ?? BLANK_GUESS_ARRAY;
 
   return (
     <p className='guess'>

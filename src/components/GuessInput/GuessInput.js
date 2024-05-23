@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GuessInput = function({ guessList, setGuessList }) {
+const GuessInput = function({ guessList, setGuessList, guessCount, setGuessCount }) {
   const [guess, setGuess] = React.useState('')
 
   return (
@@ -12,6 +12,7 @@ const GuessInput = function({ guessList, setGuessList }) {
       if (guess.length === 5) {
         setGuess('')
         console.log(guess);
+        setGuessCount(guessCount + 1)
         if (!guessList.includes(guess)) {
           let newGuessList = [...guessList];
           newGuessList.push(guess);
