@@ -1,19 +1,20 @@
 import React from 'react';
 
 
-const GuessList = function() {
-  const [guessList, setGuessList] = React.useState([]);
+const GuessList = function({ guessList }) {
 
   return (
     <div className='guess-results'>
       {guessList.map(guess => {
-        <p
+        return (<p
           className='guess'
           key={guess}
         >
           {guess}
-        </p>;
+        </p>);
       })}
     </div>
   )
 }
+
+export default GuessList;
